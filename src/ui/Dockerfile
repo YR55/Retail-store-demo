@@ -32,11 +32,7 @@ RUN dnf install -y \
     java-21-amazon-corretto-headless \
     && dnf clean all
 
-# Non-root user for security
-RUN useradd -m appuser
-
 WORKDIR /app
-USER appuser
 
 COPY --from=build /build/app.jar app.jar
 
