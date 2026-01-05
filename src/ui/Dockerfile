@@ -6,6 +6,7 @@ FROM public.ecr.aws/amazonlinux/amazonlinux:2023 AS build
 RUN dnf install -y \
     maven \
     java-21-amazon-corretto-headless \
+    tar \
     && dnf clean all
 
 WORKDIR /build
