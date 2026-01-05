@@ -7,6 +7,7 @@ RUN dnf install -y \
     maven \
     java-21-amazon-corretto-headless \
     tar \
+    gzip \
     && dnf clean all
 
 WORKDIR /build
